@@ -124,6 +124,10 @@ Such as: `get_pods`, `get_secrets`, `get_services`, `get_nodes`, `get_replicatio
 pods = client.get_pods
 ```
 
+You can get entities under a specific namespace by specifying a parameter named `namespace`:
+```ruby
+pods = client.get_pods(namespace: 'staging')
+```
 You can get entities which have specific labels by specifying a parameter named `label_selector` (named `labelSelector` in Kubernetes server):
 ```ruby
 pods = client.get_pods(label_selector: 'name=redis-master')
